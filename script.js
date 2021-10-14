@@ -31,22 +31,23 @@ const display_val = document.querySelector('.calc-screen-container-present');
 
 // display numbers on screen
 function displayToScreen() {
-  let displayZero = display_val.textContent += 0;
-  let removeZero = display_val.textContent -= 0;
+  // let display = display_val.textContent;
   pressNum.forEach((btn) => {
-    let showScreen = pressNum.value == display_val;
-    if(showScreen) {
-      btn.addEventListener('click', () => {
-        displayZero;
-        display_val.textContent = btn.innerHTML;
-      });
-    } else {
-      btn.addEventListener('click', () => {
-        removeZero;
-        display_val.textContent += btn.innerHTML;
-      });
-    }
+    let showScreen = display_val.value;
+    btn.addEventListener('click', () => {
+      
+        return display_val.textContent += parseInt(btn.innerHTML);
+      
+    });
   });
 } 
 
 displayToScreen();
+
+// let firstPressed = pressNum.addEventListener('click', () => {
+//   display_val.textContent = btn.innerHTML;
+// });
+
+// let secondPressed = pressNum.addEventListener('click', () => {
+//   display_val.textContent += btn.innerHTML;
+// });
